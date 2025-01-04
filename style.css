@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  width: 80%;
+  margin: auto;
+  border: solid black 2px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+#logo img{
+    width: auto;
+    height: 50px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #464f51;
+    font-size: 18px;
+
+}

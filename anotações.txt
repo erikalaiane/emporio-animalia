@@ -1,0 +1,7 @@
+Paleta de cores:
+#464f51
+#ec4e20
+#ff9505
+#79a782
+#e8d3a0
+#f5f5f5

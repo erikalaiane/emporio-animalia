@@ -245,7 +245,6 @@ header .container {
         color: #ec4e20; /* Hover nos itens do menu */
     }
 
-    /* Alinha o ícone do hambúrguer à esquerda */
     .menu-hamburguer {
         display: block;
         cursor: pointer;

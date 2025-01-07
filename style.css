@@ -1,55 +1,73 @@
+/* Reset */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* Estilo do header */
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #79a782;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(202, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
 }
 
+/* Logo */
 #logo img {
-    max-height: 60px;
+    max-height: 90px;
+    width: auto;
 }
 
+/* Menu */
 .menu ul {
     display: flex;
-    gap: 15px;
     list-style: none;
+    gap: 25px;
     background-color: #e8d3a0;
-    padding: 10px;
+    padding: 12px 14px;
     border-radius: 25px;
     border: solid 1px #464f51;
+    align-items: center;
+    font-size: 1.2rem;
 }
 
+/* Links do menu */
 .menu a {
     text-decoration: none;
     color: #464f51;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .menu a:hover {
-    color: #f5f5f5;
-    padding: 7px 10px;
     background-color: #ec4e20;
     border-radius: 25px;
+    color: #f5f5f5;
 }
 
+/* Botão de agendamento */
 .btn-agendamento {
     margin-left: 20px;
 }
@@ -58,15 +76,178 @@ header .container {
     background-color: #464f51;
     color: #f5f5f5;
     text-decoration: none;
+    box-shadow: 5px 5px 0 #ff9505;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 25px;
-    padding: 10px 22px;
-    font-weight: bold;
-    box-shadow: 10px 7px 0px #ff9505;
+    border: solid 1px #464f51;
     transition: all 0.3s ease;
 }
 
 .btn-agendar:hover {
     background-color: #ff9505;
     color: #464f51;
-    box-shadow: 10px 7px 0px #464f51;
+    box-shadow:  5px 5px 0 #464f51;
+}
+
+/* Responsividade - Ajustes para larguras específicas */
+
+/* Entre 1035px e 840px */
+@media (max-width: 1035px) {
+    header .container {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    #logo img {
+        max-height: 75px; /* Diminui o tamanho da logo */
+    }
+
+    .menu ul {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte no menu */
+        padding: 6px 10px;
+    }
+
+    .btn-agendar {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Entre 839px e 770px */
+@media (max-width: 839px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #logo img {
+        max-height: 60px; /* Diminui mais o tamanho da logo */
+    }
+
+    .menu ul {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 0.85rem; /* Diminui mais o tamanho da fonte no menu */
+        padding: 5px 8px; /* Diminui o padding dos links */
+    }
+
+    .btn-agendar {
+        padding: 8px 16px;
+        font-size: 0.85rem; /* Diminui o tamanho da fonte do botão */
+    }
+}
+
+/* Entre 769px e 480px */
+@media (max-width: 769px) and (min-width: 480px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    #logo {
+        flex: 1;
+        display: flex;
+        justify-content: center; /* Logo no centro */
+    }
+
+    #logo img {
+        max-height: 50px; /* Ajusta o tamanho da logo */
+    }
+
+    /* Esconde o menu original */
+    .menu {
+        display: none;
+    }
+
+    /* Exibe o ícone do hambúrguer */
+    .menu-hamburguer {
+        display: block;
+        cursor: pointer;
+        order: -1; /* Coloca o hambúrguer antes da logo */
+    }
+
+    .menu-hamburguer div {
+        width: 30px;
+        height: 3px;
+        background-color: #464f51;
+        margin: 5px 0;
+    }
+
+    .btn-agendamento {
+        margin-left: auto; /* Coloca o botão à direita */
+    }
+
+    .btn-agendar {
+        padding: 8px 16px;
+        font-size: 1rem; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Estilo para o menu hamburguer quando a tela for menor que 769px */
+@media (max-width: 769px) {
+    /* Menu está escondido por padrão */
+    .menu ul {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Menu quando está ativo (aparecendo) */
+    .menu.active ul {
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 60px; /* Alinha o menu abaixo do header */
+        left: 0;
+        width: 100%;
+        background-color: #79a782;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    /* Efeito de animação para os itens do menu */
+    .menu.active ul li {
+        margin: 10px 0;
+        animation: slideIn 0.3s ease-out forwards;
+    }
+
+    /* Animação de deslizar para os itens do menu */
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .menu.active ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .menu.active ul li a:hover {
+        color: #ec4e20; /* Hover nos itens do menu */
+    }
+
+    /* Alinha o ícone do hambúrguer à esquerda */
+    .menu-hamburguer {
+        display: block;
+        cursor: pointer;
+    }
 }

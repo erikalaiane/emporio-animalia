@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emporio Animlia</title>
-    <link rel="shortcut icon" href="assets/Empório__icon.ico" type="image/x-icon">
+    <title>Empório Animalia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div id="logo">
-                <img src="assets/Empório-foto.png" alt="Logo do Site">
-        
-        </div>
-        
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Artigos</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div id="logo">
+                <a href="index.html" aria-label="Página inicial">
+                    <img src="assets/Empório-foto.png" alt="Logo do site Empório Animalia">
+                </a>
+            </div>
 
-        <div class="btn-agendamento">
-          <a href="#agendamento" class="btn-agendar">Agendamento</a>
+            <!-- Ícone do menu hambúrguer -->
+            <div class="menu-hamburguer" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-agendamento">
+                <a href="#agendamento" class="btn-agendar" role="button">Agendamento</a>
+            </div>
         </div>
-      </div>
     </header>
+    <script src="script.js"></script>
 </body>
 </html>

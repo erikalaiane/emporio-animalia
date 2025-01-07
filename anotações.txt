@@ -5,3 +5,16 @@ Paleta de cores:
 #79a782
 #e8d3a0
 #f5f5f5
+
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    background-color: #e8d3a0;
+    padding: 12px 14px;
+    border-radius: 25px;
+    border: solid 1px #464f51;
+    align-items: center;
+    font-size: 1.2rem;
+    left: 10px;
+}

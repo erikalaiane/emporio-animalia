@@ -174,9 +174,17 @@ header .container {
         display: block;
         cursor: pointer;
         order: -1; /* Coloca o hambúrguer antes da logo */
+        padding: 10px;
     }
 
-    .menu-hamburguer div {
+    .menu-hamburguer:hover{
+        background-color: #ff9705b0;
+        border-radius: 25px;
+        padding: 10px;
+        transition: 0.3s ease;
+    }
+
+    .menu-hamburguer .bar {
         width: 30px;
         height: 3px;
         background-color: #464f51;
@@ -243,10 +251,5 @@ header .container {
 
     .menu.active ul li a:hover {
         color: #ec4e20; /* Hover nos itens do menu */
-    }
-
-    .menu-hamburguer {
-        display: block;
-        cursor: pointer;
     }
 }

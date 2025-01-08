@@ -158,15 +158,17 @@ header .container {
         flex: 1;
         display: flex;
         justify-content: center; /* Logo no centro */
+        padding-left: 30px;
+        
     }
 
     #logo img {
-        max-height: 50px; /* Ajusta o tamanho da logo */
+        max-height: 70px; /* Ajusta o tamanho da logo */
     }
 
     /* Esconde o menu original */
     .menu {
-        display: none;
+        
     }
 
     /* Exibe o ícone do hambúrguer */
@@ -177,7 +179,7 @@ header .container {
         padding: 10px;
     }
 
-    .menu-hamburguer:hover{
+    .menu-hamburguer:hover {
         background-color: #ff9705b0;
         border-radius: 25px;
         padding: 10px;
@@ -215,11 +217,12 @@ header .container {
         display: block;
         opacity: 1;
         position: absolute;
-        top: 60px; /* Alinha o menu abaixo do header */
+        top: 93px; /* Alinha o menu abaixo do header */
         left: 0;
         width: 100%;
-        background-color: #79a782;
+        background-color: #464f51;
         padding: 10px;
+        border-radius: 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
@@ -250,6 +253,97 @@ header .container {
     }
 
     .menu.active ul li a:hover {
-        color: #ec4e20; /* Hover nos itens do menu */
+        background-color: #e8d3a0; /* Hover nos itens do menu */
+        padding: 2px 100px 2px 100px;
+        color: #ec4e20;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between; /* Itens do header espalhados */
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Menu hambúrguer à esquerda */
+    .menu-hamburguer {
+        display: block; /* Exibe o menu hambúrguer */
+        order: -1; 
+        cursor: pointer;
+        padding: 10px;
+        margin-right: auto; /* Espaço à direita */
+    }
+
+    .menu-hamburguer:hover {
+        background-color: #ff9705b0;
+        border-radius: 25px;
+    }
+
+    .menu-hamburguer .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #464f51;
+        margin: 5px 0;
+    }
+
+    /* Logo no centro */
+    #logo {
+        flex: 1;
+        display: flex;
+        justify-content: center; /* Centraliza a logo */
+        padding-left: 70px;
+    }
+
+    #logo img {
+        max-height: 70px; /* Reduz o tamanho da logo */
+        width: auto;
+    }
+
+    /* Botão de agendamento à direita */
+    .btn-agendamento {
+        margin-left: -3px; /* Coloca o botão à direita */
+    }
+
+    .btn-agendar {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: 8px 12px;
+    }
+
+    /* Menu original (escondido por padrão) */
+    .menu ul {
+        display: none; /* Esconde o menu original */
+    }
+
+    /* Menu quando o hambúrguer é clicado */
+    .menu.active ul {
+        display: block; /* Torna o menu visível */
+        top: 88px;/* Coloca o menu abaixo do header */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #464f51;
+        padding: 15px 0;
+        position: absolute;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active ul li {
+        margin: 10px 0; /* Espaço entre os itens */
+    }
+
+    .menu.active ul li a {
+        font-size: 1rem;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu.active ul li a:hover {
+        background-color: #ec4e20;
+        padding: 10px;
     }
 }

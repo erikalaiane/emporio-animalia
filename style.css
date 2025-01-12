@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.dynapuff-<uniquifier> {
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
 /* Reset */
 * {
     margin: 0;
@@ -7,7 +33,7 @@
 
 /* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", serif;
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
@@ -79,6 +105,7 @@ header .container {
     box-shadow: 5px 5px 0 #ff9505;
     padding: 10px 20px;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 25px;
     border: solid 1px #464f51;
     transition: all 0.3s ease;
@@ -88,6 +115,258 @@ header .container {
     background-color: #ff9505;
     color: #464f51;
     box-shadow:  5px 5px 0 #464f51;
+}
+
+.highlight-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #e8d3a0;
+    padding: 1px 10px;
+  }
+  
+  .content {
+    padding-top: 10px;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-family: "DynaPuff", serif;
+    font-size: 2.8rem;
+    color: #464f51;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .content p {
+    font-family: "Montserrat", serif;
+    margin: 15px 0;
+    font-size: 1.6rem;
+    color: #464f51;
+    font-weight: bold;
+  }
+  
+  .buttons {
+    padding-top: 30px ;
+    margin: 20px 0;
+  }
+  
+  .adopt-btn, .services-btn {
+    background-color: #ffa726;
+    color: #464f51;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 5px 5px 0 #464f51;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .adopt-btn:hover, .services-btn:hover {
+    transform: scale(1.1);
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #f57c00;
+    color: #f5f5f5;
+  }
+  
+  .services-btn {
+    color: #f5f5f5;
+    background-color: #ec4e20;
+  }
+  
+  .services-btn:hover {
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #ec4e20;
+  }
+
+  .highlight-section .brand {
+    font-family: "DynaPuff", serif;
+    font-size: 1.5rem;
+    color: #ec4e20;
+    text-shadow: #464f51;
+    margin-top: 30px;
+}
+  
+  .images img {
+    margin: 0 10px;
+  }
+
+  .about-us {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 1px 10px;
+  }
+
+ .sobre h1{
+    text-align: center;
+    font-family: "DynaPuff", serif;
+    color: #464f51;
+    font-size: 2.8rem;
+    padding-top: 20px;
+    position: relative;
+    left: 50px;
+  }
+
+#patinha {
+    width: 50px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+  }
+
+.vet-pet img{
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+}
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.area2{
+    padding: 20px 0 0 20px;
+    max-width: 500px;
+    font-family: "Montserrat", serif;
+    margin: 15px 0;
+    font-size: 1.45rem;
+    color: #464f51;
+    font-weight: bold;
+    text-align: center;
+}
+
+.area2 p{
+    margin-top: 20px;
+}
+
+.equipe-btn {
+    background-color: #79a782;
+    color: #2d3335;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 0 #464f51;
+    padding: 15px 20px;
+    margin: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .equipe-btn:hover{
+    transform: scale(1.1);
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #79a782;
+    color: #f5f5f5;
+  }
+
+  .um-lugar{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .caixas {
+    display: flex;
+    width: 250px;
+    height: 350px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1px solid #464f51;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column; /* Alinha os elementos na vertical */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+}
+
+.caixas:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.caixas img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.caixas h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caixas p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.botao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-type1,
+.button-type2 {
+    width: 80%;
+    border: none;
+    box-shadow: 5px 5px 0 #464f51;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: #ec4e20;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.button-type1:hover {
+    color: #f5f5f5;
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #ec4e20;
+    transform: scale(1.05);
+}
+
+.button-type2 {
+    color: #464f51;
+    background-color: #ff9505;
+}
+
+.button-type2:hover {
+    color: #f5f5f5;
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #ec4e20;
+    transform: scale(1.05);
+}
+
+.one-local h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "DynaPuff", serif;
 }
 
 /* Responsividade - Ajustes para larguras específicas */
@@ -166,10 +445,6 @@ header .container {
         max-height: 70px; /* Ajusta o tamanho da logo */
     }
 
-    /* Esconde o menu original */
-    .menu {
-        
-    }
 
     /* Exibe o ícone do hambúrguer */
     .menu-hamburguer {

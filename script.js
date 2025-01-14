@@ -51,3 +51,22 @@ wrapper.addEventListener("touchend", (e) => {
     prevTestimonial();
   }
 });
+
+let currentIndex = 0;
+
+function nextSlide() {
+  const slider = document.querySelector('.slider-container');
+  const cards = document.querySelectorAll('.pet-card');
+  if (currentIndex < cards.length - 1) {
+    currentIndex++;
+    slider.style.transform = `translateX(-${currentIndex * 220}px)`;
+  }
+}
+
+function prevSlide() {
+  const slider = document.querySelector('.slider-container');
+  if (currentIndex > 0) {
+    currentIndex--;
+    slider.style.transform = `translateX(-${currentIndex * 220}px)`;
+  }
+}

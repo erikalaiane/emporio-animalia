@@ -136,8 +136,9 @@
 
       <section class="testimonials">
         <h2>Depoimentos</h2>
+        
         <div class="testimonials-container">
-          <button class="arrow left" onclick="prevTestimonial()">&#8249;</button>
+          <div class="arrow left" onclick="prevTestimonial()">&#8249;</div>
           <div class="testimonial-wrapper">
             <div class="testimonial">
               <p>A Empório Animalia é excelente! Levei meu cachorro Thor para um check-up e o atendimento foi impecável. Toda a equipe é muito atenciosa e o pet shop tem ótimos produtos. Recomendo para todos que querem o melhor para seus pets!</p>
@@ -176,8 +177,12 @@
               <span>tutor do Bolt</span>
             </div>
           </div>
-          <button class="arrow right" onclick="nextTestimonial()">&#8250;</button>
+          <!-- Mover as setas para fora da "testimonial-wrapper" -->
+           <div class="arrow right" onclick="nextTestimonial()">&#8250;</div>
         </div>
+        
+        
+      
         <div class="dots">
           <span class="dot active" onclick="showTestimonial(0)"></span>
           <span class="dot" onclick="showTestimonial(1)"></span>
@@ -188,42 +193,63 @@
         </div>
       </section>
       
-      <section class="adoption-section">
-        <h1>Amigos à Espera de Um Lar</h1>
-        <div class="slider">
-          <button class="slider-btn left-btn" onclick="prevSlide()">&#8592;</button>
-          <div class="slider-wrapper">
-            <div class="slider-container">
-              <div class="pet-card">
-                <img class="pet-adp" src="https://via.placeholder.com/150" alt="Zeca">
-                <h2>Zeca</h2>
-                <p>Brincalhão e dócil</p>
-                <button class="details-btn">Saiba mais</button>
-              </div>
-              <div class="pet-card">
-                <img class="pet-adp" src="https://via.placeholder.com/150" alt="Lina">
-                <h2>Lina</h2>
-                <p>Adora crianças</p>
-                <button class="details-btn">Saiba mais</button>
-              </div>
-              <div class="pet-card">
-                <img class="pet-adp" src="https://via.placeholder.com/150" alt="Nico">
-                <h2>Nico</h2>
-                <p>Calmo e carinhoso</p>
-                <button class="details-btn">Saiba mais</button>
-              </div>
-              <div class="pet-card">
-                <img class="pet-adp" src="https://via.placeholder.com/150" alt="Nico">
-                <h2>caco</h2>
-                <p>Calmo e carinhoso</p>
-                <button class="details-btn">Saiba mais</button>
-              </div>
+      
+      <section class="adoption">
+        <h2>Amigos à Espera de Um Lar</h2>
+        <div class="adoption-container">
+          <div class="arrow left" onclick="prevPet()">&#8249;</div>
+          <div class="caixa-adocao">
+          <div class="adoption-wrapper">
+            <div class="pet">
+              <img src="assets/pet-1.jpg" alt="Zeca">
+              <h3>Zeca</h3>
+              <p>Brincalhão e Dócil</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-2.jpg" alt="Lina">
+              <h3>Lina</h3>
+              <p>Adora Crianças</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-3.jpg" alt="Nico">
+              <h3>Nico</h3>
+              <p>Calmo e Carinhoso</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-4.jpg" alt="Bella">
+              <h3>Bella</h3>
+              <p>Cheia de Energia</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-5.jpg" alt="Luke">
+              <h3>Luke</h3>
+              <p>Companheiro Fiel</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-6.jpg" alt="Mimi">
+              <h3>Mimi</h3>
+              <p>Curiosa e Amável</p>
+              <button>Saiba mais</button>
+            </div>
+            <div class="pet">
+              <img src="assets/pet-7.jpg" alt="Toby">
+              <h3>Toby</h3>
+              <p>Guardião Protetor</p>
+              <button>Saiba mais</button>
             </div>
           </div>
-          <button class="slider-btn right-btn" onclick="nextSlide()">&#8594;</button>
         </div>
-        <button class="view-all-btn">Ver Todos os Animais</button>
+          <div class="arrow right" onclick="nextPet()">&#8250;</div>
+        </div>
+        <button class="view-all">Ver Todos os Animais</button>
       </section>
+      
+      
 
     <footer>
 

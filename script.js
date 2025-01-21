@@ -52,21 +52,24 @@ wrapper.addEventListener("touchend", (e) => {
   }
 });
 
-let currentIndex = 0;
+let currentPetIndex = 0;
 
-function nextSlide() {
-  const slider = document.querySelector('.slider-container');
-  const cards = document.querySelectorAll('.pet-card');
-  if (currentIndex < cards.length - 1) {
-    currentIndex++;
-    slider.style.transform = `translateX(-${currentIndex * 220}px)`;
-  }
+function showPet(index) {
+  const wrapper = document.querySelector(".adoption-wrapper");
+  const pets = document.querySelectorAll(".pet");
+  const totalPets = pets.length;
+
+  // Limita o índice dentro do número de pets
+  currentPetIndex = (index + totalPets) % totalPets;
+
+  // Move o carrossel
+  wrapper.style.transform = `translateX(-${currentPetIndex * 270}px)`; // 270px = largura do card + margem
 }
 
-function prevSlide() {
-  const slider = document.querySelector('.slider-container');
-  if (currentIndex > 0) {
-    currentIndex--;
-    slider.style.transform = `translateX(-${currentIndex * 220}px)`;
-  }
+function nextPet() {
+  showPet(currentPetIndex + 1);
+}
+
+function prevPet() {
+  showPet(currentPetIndex - 1);
 }

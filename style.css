@@ -376,6 +376,11 @@ header .container {
     background-color: #e9e9e9;
     padding: 30px;
   }
+
+  .testimonials p{
+    width: 80%;
+    margin: auto;
+  }
   
   .testimonials-container {
     position: relative;
@@ -446,95 +451,136 @@ header .container {
   
   .dot.active {
     background-color: #ffa500; /* Cor destacada */
+    padding: 20px;
+    padding-bottom: 50px;
   }
 
-  .adoption-section{
-    background-color: #e8d3a0;
-    text-align: center;
-    font-family: "Montserrat", serif;
-    margin: 0;
-    padding: 30px;
-  }
-
-.adoption-section h1{
-    font-size: 2rem;
-  color: #333;
+.adoption {
+  background-color: #e8d3a0;
 }
-  
-.slider {
+
+  .adoption-container {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .slider-wrapper {
     overflow: hidden;
+     /* Ajuste para o seu layout */
+    margin: auto;
     width: 80%;
   }
-  
-  .slider-container {
+ 
+  .adoption-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    
   }
   
-  .pet-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 0 10px;
-    min-width: 200px;
+   .adoption h2{
+    padding: 30px 0 10px 0;
     text-align: center;
+    font-family: "DynaPuff", serif;
+    font-size: 30px;
+    color: #464f51;
+  }
+
+.caixa-adocao{
+  margin: 0 60px 0 60px;
+    width: 70%;
+}
+
+  .pet {
+    margin: 0 10px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .pet-card img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  .details-btn {
-    background: #5cb85c;
-    color: #fff;
+
+ .pet img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+ 
+.pet h3, p{
+  padding-bottom: 5px;
+}
+
+.pet button{
+  background-color: #79a782;
+  color: #31393b;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 #464f51;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: solid 1px #464f51;
+  transition: all 0.3s ease;
+  margin: 5px 0 10px 0;
+}
+
+.pet button:hover{
+  background-color: #464f51;
+  color: #e9e9e9;
+  box-shadow: 5px 5px 0 #79a782;
+}
+
+ .adoption .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ec4e20;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .details-btn:hover {
-    background: #4cae4c;
-  }
-  
-  .slider-btn {
-    background: #ff6f61;
     color: #fff;
-    border: none;
-    padding: 10px;
+    font-size: 24px;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
   }
-  
-  .slider-btn:hover {
-    background: #e55b4e;
+ 
+ .adoption .arrow.left {
+    left: 20px;
   }
-  
-  .view-all-btn {
-    background: #ff6f61;
-    color: #fff;
+ 
+.adoption  .arrow.right {
+    right: 20px;
+  }
+ 
+ .adoption .arrow:hover {
+    background: #c54017;
+  }
+ 
+  .view-all {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px ;
+    background-color: #ec4e20;
+    box-shadow: 5px 5px 0 #464f51;
+    color: #f5f5f5;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: transform 0.3s;
+  text-decoration: none;
     font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
   }
-  
-  .view-all-btn:hover {
-    background: #e55b4e;
+ 
+  .view-all:hover {
+    transform: scale(1.1);
+    background-color: #464f51;
+    box-shadow: 5px 5px 0 #ec4e20;
   }
+
 
 /* Responsividade - Ajustes para larguras específicas */
 

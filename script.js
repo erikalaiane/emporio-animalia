@@ -59,11 +59,24 @@ function showPet(index) {
   const pets = document.querySelectorAll(".pet");
   const totalPets = pets.length;
 
-  // Limita o índice dentro do número de pets
-  currentPetIndex = (index + totalPets) % totalPets;
+  // Tamanho total do card (calculado a partir do CSS)
+  const petWidth = 220;
+
+  // Determina quantos pets são visíveis no contêiner
+  const visiblePets = Math.floor(wrapper.parentElement.offsetWidth / petWidth);
+  const maxIndex = totalPets - visiblePets;
+
+  // Ajusta o índice para ficar dentro do limite
+  if (index < 0) {
+    currentPetIndex = maxIndex; // Vai para o último conjunto de pets visíveis
+  } else if (index > maxIndex) {
+    currentPetIndex = 0; // Volta ao início
+  } else {
+    currentPetIndex = index;
+  }
 
   // Move o carrossel
-  wrapper.style.transform = `translateX(-${currentPetIndex * 270}px)`; // 270px = largura do card + margem
+  wrapper.style.transform = `translateX(-${currentPetIndex * petWidth}px)`;
 }
 
 function nextPet() {

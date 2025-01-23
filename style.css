@@ -755,12 +755,12 @@ header .container {
   background-color: #e8d3a0;
   color: #333;
   font-family: Arial, sans-serif;
-  padding: 20px 30px;
+  padding: 10px;
 }
 
 .footer-top-text {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
   color: #464f51;
@@ -780,7 +780,7 @@ header .container {
     flex-direction: column;
     align-items: center; /* Centraliza horizontalmente */
     justify-content: flex-start; /* Alinha os itens ao topo */
-    gap: 15px; /* Espaçamento entre logo e redes sociais */
+    gap: 10px; /* Espaçamento entre logo e redes sociais */
 }
 
 
@@ -796,11 +796,9 @@ header .container {
 
 .footer-links {
   list-style: none;
-  padding: 5px;
-  margin-left: 70px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   font-size: 1em ;
   font-weight: 500;
   
@@ -818,20 +816,22 @@ header .container {
 
 /* Redes sociais */
 .footer-socials {
-  margin-top: 20px;
-  padding-left: 40px;
+  margin-top: 5px;
   display: flex;
   gap: 20px;
 }
 
-.footer-socials a img {
-  width: 30px;
-  height: 30px;
+.footer-socials .social-icon {
+  width: 20px;
+  height: 20px;
   transition: transform 0.2s;
+  color: #464f51;
+  font-size: 20px ;
 }
 
-.footer-socials a img:hover {
+.footer-socials .social-icon:hover {
   transform: scale(1.2);
+  color: #c54017;
 }
 
 /* Seção da direita */
@@ -842,27 +842,24 @@ header .container {
   align-items: center;
   justify-content: center; /* Centraliza verticalmente */
     text-align: center; /* Centraliza os textos */
-    gap: 15px; /* Espaçamento entre os elementos */
+    gap: 20px; /* Espaçamento entre os elementos */
 }
 
-.footer-right h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
 
 .footer-right p {
-  font-size: 14px;
+  font-size: 15px;
   color: #464f51;
+  width: 270px;
+  padding-top: 0;
 }
 
 
 .footer-newsletter {
   display: flex;
   gap: 5px;
-  margin-top: 10px;
 }
 
-.footer-newsletter input {
+.footer-newsletter #newsletter-email {
   padding: 10px 20px;
   border: 1px solid #333;
   border-radius: 25px;
@@ -870,10 +867,12 @@ header .container {
   background-color: #464f51;
   color: #ddd;
   font-weight: 700;
+  box-shadow: 5px 5px 0 #ec4e20;
+  margin-right: 5px;
 }
 
 .footer-newsletter button {
-  background-color: #e07a5f;
+  background-color: #ec4e20;
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
@@ -883,7 +882,6 @@ header .container {
 }
 
 .footer-newsletter button:hover{
-  background-color: #e07a5f;
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
